@@ -68,7 +68,7 @@ const PlayerHeader = () => {
       
       {/* Centered player image */}
       <div className="centered-player-image">
-        <img src="/src/components/public/images/Hardik.jpg" alt="Hardik Pandya" />
+        <img src="/images/Hardik.jpg" alt="Hardik Pandya" />
       </div>
     </div>
   );

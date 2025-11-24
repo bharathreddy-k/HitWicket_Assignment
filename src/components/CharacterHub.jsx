@@ -4,7 +4,7 @@ import { useTheme } from '../context/AppThemeProvider';
 import './CharacterHub.css';
 
 const CharacterHub = ({
-  playerImage = '/src/components/public/images/Hardik.jpg',
+  playerImage = '/images/Hardik.jpg',
   name = 'HARDIK PANDYA',
   className = 'Stormbreaker',
   level = 95,

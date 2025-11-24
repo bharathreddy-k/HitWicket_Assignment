@@ -12,10 +12,10 @@ const FormatStats = () => {
   ];
 
   const formatImages = {
-    Test: '/src/components/public/images/Test.png',
-    ODI: '/src/components/public/images/ODI.png',
-    T20: '/src/components/public/images/T20.png',
-    IPL: '/src/components/public/images/MI.png'
+    Test: '/images/Test.png',
+    ODI: '/images/ODI.png',
+    T20: '/images/T20.png',
+    IPL: '/images/MI.png'
   };
 
   const statsData = {

@@ -1,0 +1,146 @@
+.app {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 0;
+}
+
+.global-mode-toggle {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: #e9d5ff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.global-mode-toggle:hover {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.global-mode-toggle .mode-icon {
+  font-size: 20px;
+}
+
+.global-mode-toggle .mode-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .global-mode-toggle {
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .global-mode-toggle .mode-icon {
+    font-size: 18px;
+  }
+  
+  .global-mode-toggle .mode-text {
+    display: none;
+  }
+}
+
+/* Cricket-themed decorative elements */
+.app::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -10%;
+  width: 40%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at center, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatLeft 25s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  top: 20%;
+  right: -10%;
+  width: 50%;
+  height: 80%;
+  background: 
+    radial-gradient(ellipse at center, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatRight 30s ease-in-out infinite;
+  filter: blur(80px);
+}
+
+@keyframes floatLeft {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20%, -10%) scale(1.1);
+  }
+}
+
+@keyframes floatRight {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-15%, 10%) scale(1.15);
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  padding: 80px 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: transparent;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+@media (max-width: 768px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 24px;
+  }
+}

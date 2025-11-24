@@ -1,0 +1,49 @@
+.section-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.chapter-number {
+  font-size: 14px;
+  font-weight: 800;
+  color: #8b5cf6;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  animation: chapterFade 2s ease-in-out infinite;
+}
+
+.title-main {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+  animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 60px rgba(168, 85, 247, 1), 0 0 80px rgba(168, 85, 247, 0.5);
+  }
+}
+
+@keyframes chapterFade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}

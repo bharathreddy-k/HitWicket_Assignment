@@ -1,0 +1,52 @@
+.performance-charts {
+  background: transparent;
+  padding: 80px 60px;
+  margin-bottom: 0;
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.chart-card {
+  background: rgba(30, 41, 59, 0.6);
+  border-radius: 20px;
+  padding: 32px;
+  border: 2px solid rgba(139, 92, 246, 0.25);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.chart-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chart-icon {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .performance-charts {
+    padding: 24px;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
